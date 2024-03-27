@@ -3,7 +3,7 @@ const replacements = [
     { from: /(?:^|\n)(.+?)(\n|$)/g, html: '<p>$1</p>\n' }, // paragraph
     { 
         from: /(?![\dA-Za-zА-Яа-яҐґЄєІіЇї])\*\*([\dA-Za-zА-Яа-яҐґЄєІіЇї])(.*?)([\dA-Za-zА-Яа-яҐґЄєІіЇї])\*\*(?![\dA-Za-zА-Яа-яҐґЄєІіЇї])/,
-        html: '<b>$1$2$3</b>', // bold
+        html: '<brrrrrrrrrrrrrrrrrrrrrrrrr>$1$2$3</b>', // bold
         stdout: '\x1b[1m$1$2$3\x1b[0m',
     },
     { 

@@ -15,3 +15,5 @@ Flags
 - `--format=<type>` -> can be _html_ or _stdout_. Allows to choose output format 
 
 Link to [reverted commit](https://github.com/DimasComp/mtrpz-lab-1/commit/6fc88c1d26483ed0dc81adef576366b8db7e9fb4)
+
+Link to [comit which failed his test](https://github.com/DimasComp/mtrpz-lab-2/commit/a6655065811af3be8ac136cc9f5c6e381baa0589)

@@ -1,18 +1,18 @@
 const replacements = [
     { from: /```(.*?)```/gs, html: '<pre>$1</pre>', stdout: '\x1b[7m$1\x1b[0m' }, // preformatted
-    { from: /(?:^|\n)(.*?)\n/g, html: '<p>$1</p>' }, // paragraph
+    { from: /(?:^|\n)(.+?)(\n|$)/g, html: '<p>$1</p>\n' }, // paragraph
     { 
-        from: /(?<![\dA-Za-zА-Яа-яҐґЄєІіЇї])\*\*([\dA-Za-zА-Яа-яҐґЄєІіЇї])(.*?)([\dA-Za-zА-Яа-яҐґЄєІіЇї])\*\*(?![\dA-Za-zА-Яа-яҐґЄєІіЇї])/,
+        from: /(?![\dA-Za-zА-Яа-яҐґЄєІіЇї])\*\*([\dA-Za-zА-Яа-яҐґЄєІіЇї])(.*?)([\dA-Za-zА-Яа-яҐґЄєІіЇї])\*\*(?![\dA-Za-zА-Яа-яҐґЄєІіЇї])/,
         html: '<b>$1$2$3</b>', // bold
         stdout: '\x1b[1m$1$2$3\x1b[0m',
     },
     { 
-        from: /(?<![\dA-Za-zА-Яа-яҐґЄєІіЇї])_([\dA-Za-zА-Яа-яҐґЄєІіЇї])(.*?)([\dA-Za-zА-Яа-яҐґЄєІіЇї])_(?![\dA-Za-zА-Яа-яҐґЄєІіЇї])/,
+        from: /(?![\dA-Za-zА-Яа-яҐґЄєІіЇї])_([\dA-Za-zА-Яа-яҐґЄєІіЇї])(.*?)([\dA-Za-zА-Яа-яҐґЄєІіЇї])_(?![\dA-Za-zА-Яа-яҐґЄєІіЇї])/,
         html: '<i>$1$2$3</i>', // italic
         stdout: '\x1b[3m$1$2$3\x1b[0m',
     },
     { 
-        from: /(?<![\dA-Za-zА-Яа-яҐґЄєІіЇї])`([\dA-Za-zА-Яа-яҐґЄєІіЇї])(.*?)([\dA-Za-zА-Яа-яҐґЄєІіЇї])`(?![\dA-Za-zА-Яа-яҐґЄєІіЇї])/,
+        from: /(?![\dA-Za-zА-Яа-яҐґЄєІіЇї])`([\dA-Za-zА-Яа-яҐґЄєІіЇї])(.*?)([\dA-Za-zА-Яа-яҐґЄєІіЇї])`(?![\dA-Za-zА-Яа-яҐґЄєІіЇї])/,
         html: '<tt>$1$2$3</tt>', // monospaced
         stdout: '\x1b[7m$1$2$3\x1b[0m',
     },
@@ -51,6 +51,8 @@ export const convertMarkdown = (text, format) => {
     if (hasNestedTags) {
         throw new Error('Nested tags are not allowed');
     }
+
+    console.log(html);
 
     const forbiddenTags = checkForbidden(html);
 

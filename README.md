@@ -17,3 +17,7 @@ Flags
 Link to [reverted commit](https://github.com/DimasComp/mtrpz-lab-1/commit/6fc88c1d26483ed0dc81adef576366b8db7e9fb4)
 
 Link to [comit which failed his test](https://github.com/DimasComp/mtrpz-lab-2/commit/a6655065811af3be8ac136cc9f5c6e381baa0589)
+
+Link to [commit which passed his test](https://github.com/DimasComp/mtrpz-lab-2/commit/22e7c8ff07fbc4faaf6488a638b459ef317d2fa1)
+
+Link to [puul request](https://github.com/DimasComp/mtrpz-lab-2/pull/1)

@@ -21,3 +21,5 @@ Link to [comit which failed his test](https://github.com/DimasComp/mtrpz-lab-2/c
 Link to [commit which passed his test](https://github.com/DimasComp/mtrpz-lab-2/commit/22e7c8ff07fbc4faaf6488a638b459ef317d2fa1)
 
 Link to [puul request](https://github.com/DimasComp/mtrpz-lab-2/pull/1)
+
+So, testing is important, even when you implement tests in small projects like this just because teacher told you so you somehow manage to find bugs. Main problem is that it is hard to write good tests. And bad tests is even worse than no tests at all. I am not very experienced in writing them so i cannot tell more. In general: writing tests is good, but complicated and time consuming (but if we will do everything in fastest way all our code will be terrible, so...)
